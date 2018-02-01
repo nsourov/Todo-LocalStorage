@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import autoBind from 'auto-bind';
+import autoBind from 'react-autobind';
 import uuid from 'uuid';
 import CreateTodo from './components/create-todo';
 import TodoItem from './components/todo-item';
@@ -74,6 +74,10 @@ class App extends Component {
       showComplete: false
     })
   }
+  clearAll(){
+    this.setState({todos: []})
+    localStorage.setItem('Todo', JSON.stringify([]))
+  }
   renderTodo(){
     if(this.state.showAll){
       return ( 
@@ -127,9 +131,17 @@ class App extends Component {
           showAll={this.showAll}
           showComplete={this.showComplete}
           showInactive={this.showInactive}
+          todo={this.state.todos}
         />
         <br/>
         {renderTodo}
+        <br/>
+        {
+          this.state.todos.length ? 
+          <button className="tiny ui red button" onClick={this.clearAll}>Clear all</button>
+          : ''
+        }
+
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import autoBind from "auto-bind";
+import autoBind from 'react-autobind';
 
 class CreateTodo extends Component {
   constructor() {
@@ -31,7 +31,7 @@ class CreateTodo extends Component {
       <div>
         <form className="ui form" onSubmit={this.handleSubmit}>
           <div className="field">
-            <input type="text" ref="input" placeholder="What's Your Focus Today"/>
+            <input type="text" ref="input" placeholder="What's Your Focus Today?"/>
           </div>
         </form>
       </div>
