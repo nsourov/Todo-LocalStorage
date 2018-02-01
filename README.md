@@ -12,4 +12,4 @@ npm start
 go to http://localhost:3000
 ```
 
-live: tight-bit.surge.sh
+live:[http://tight-bit.surge.sh](http://tight-bit.surge.sh)
