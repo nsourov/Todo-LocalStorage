@@ -23,7 +23,7 @@ class Showparate extends Component {
       <div className="ui">
       <button className="tiny ui black button" onClick={this.props.showAll}>All <span className="tiny ui red circular label">{todo.length}</span></button>
       <button className="tiny ui green button" onClick={this.props.showComplete}>Completed <span className="tiny ui violet circular label">{completed.length}</span></button>
-      <button className="tiny ui red button" onClick={this.props.showInactive}>Inactive <span className="tiny ui black circular label">{inactive.length}</span></button>
+      <button className="tiny ui red button" onClick={this.props.showInactive}>Active <span className="tiny ui black circular label">{inactive.length}</span></button>
     </div>
     );
   }
