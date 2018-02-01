@@ -8,8 +8,6 @@ class Showparate extends Component {
   }
   render() {
     const {todo} = this.props;
-    // const completed = todo.find(el => el.isCompleted)
-    // console.log(completed)
     let completed = []
     let inactive = []
     for(let i = 0; i < todo.length; i++){
